@@ -38,6 +38,19 @@
         ]
       }
     ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 100,
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": false,
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine":"auto"
+      }
+    ],
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
