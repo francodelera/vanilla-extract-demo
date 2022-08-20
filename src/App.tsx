@@ -1,6 +1,8 @@
 import React from "react";
-import HelloWorld from "components/HelloWorld";
+import {Header} from "./components/Header";
 
-const App: React.FC = () => <HelloWorld />;
+function App() {
+    return <Header>Hello Human decoders!</Header>;
+}
 
 export default App;
