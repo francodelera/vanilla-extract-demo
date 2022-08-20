@@ -1,10 +1,17 @@
 import { style } from "@vanilla-extract/css";
+import { vars } from "src/theme.css";
 
 export const headerStyles = style({
-  color: "white",
-  fontWeight: "bold",
-  fontFamily: "sans-serif",
-  background: "darkorchid",
+  background: vars.colors.blue,
   fontSize: "3rem",
-  padding: "20px",
+  padding: vars.space.extraExtraLarge,
+});
+
+export const textStyles = style({
+  fontSize: vars.fonts.fontSizes.extraExtraLarge,
+  color: "white",
+  fontFamily: vars.fonts.fontFamily.GilroyBold,
+  borderBottom: `${vars.colors.pink} solid ${vars.space.extraSmall}`,
+  paddingBottom: vars.space.small,
+  letterSpacing: vars.space.extraExtraSmall,
 });
