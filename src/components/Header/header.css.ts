@@ -1,22 +1,46 @@
-import { style, styleVariants } from "@vanilla-extract/css";
-import { vars } from "src/theme.css";
+import { style } from "@vanilla-extract/css";
+import { sprinkles } from "src/sprinkles.css";
 
-export const headerStyles = style({
-  padding: vars.space.extraExtraLarge,
+export const headerStyles = sprinkles({
+  padding: {
+    mobile: "large",
+    tablet: "extraLarge",
+    desktop: "extraExtraLarge",
+    default: "extraExtraLarge",
+  },
+  backgroundColor: {
+    lightMode: "white",
+    darkMode: "slateBlue",
+  },
 });
 
-export const textStyles = style({
-  fontSize: vars.fonts.fontSizes.extraExtraLarge,
-  fontFamily: vars.fonts.fontFamily.GilroyBold,
-  borderBottom: `${vars.colors.pink} solid ${vars.space.extraSmall}`,
-  paddingBottom: vars.space.small,
-  letterSpacing: vars.space.extraExtraSmall,
-});
-
-export const _background = styleVariants(vars.colors, (background) => ({
-  background,
-}));
-
-export const _color = styleVariants(vars.colors, (color) => ({
-  color,
-}));
+export const textStyles = style([
+  sprinkles({
+    fontSize: {
+      mobile: "medium",
+      tablet: "large",
+      desktop: "extraExtraLarge",
+      default: "extraExtraLarge",
+    },
+    fontFamily: "GilroyBold",
+    paddingBottom: "small",
+    letterSpacing: 0.5,
+    color: {
+      lightMode: "blue",
+      darkMode: "slateWhite",
+    },
+    borderBottomColor: {
+      lightMode: "pink",
+      darkMode: "slatePurple",
+    },
+    borderBottomWidth: {
+      mobile: "2px",
+      tablet: "4px",
+      desktop: "6px",
+      default: "6px",
+    },
+  }),
+  {
+    borderBottomStyle: "solid",
+  },
+]);
