@@ -1,8 +1,9 @@
+import "./globals.css";
 import React from "react";
-import { Header } from "./components/Header";
+import { Button } from "./components/Button";
 
 export const App = () => {
-  return <Header>Hello Human Decoders!</Header>;
+  return <Button>Click me!</Button>;
 };
 
 export default App;
